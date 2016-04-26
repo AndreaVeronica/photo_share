@@ -32,6 +32,12 @@
 </dl>
 
 
-<%= image_tag @user.photo.photo_url, class: "photo-image" %>
+<ul>
+  <% @user.photos.each do |photo| %>
+    <li>
+      <%= link_to "#{photo.photo_url}", user_photo_path(@user, photo) %>
+    </li>
+  <% end %>
+</ul>
 
 

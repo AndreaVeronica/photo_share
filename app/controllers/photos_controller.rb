@@ -1,5 +1,7 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user
+
 
   # GET /photos
   # GET /photos.json
@@ -10,15 +12,19 @@ class PhotosController < ApplicationController
   # GET /photos/1
   # GET /photos/1.json
   def show
+    @photo = Photo.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   # GET /photos/new
   def new
     @photo = Photo.new
+    @users = User.find(params[:user_id])
   end
 
   # GET /photos/1/edit
   def edit
+    @photo = Photo.find(params[:id])
   end
 
   # POST /photos
@@ -54,6 +60,7 @@ class PhotosController < ApplicationController
   # DELETE /photos/1
   # DELETE /photos/1.json
   def destroy
+    @photo = Photo.find(params[:id])
     @photo.destroy
     respond_to do |format|
       format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
