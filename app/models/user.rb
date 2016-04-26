@@ -15,9 +15,9 @@ class User < ActiveRecord::Base
   # Add methods to set and authenticate against a BCrypt password.
   has_secure_password
 
-  validates :password, length: { minimum: 8, maximum: 20 }
+#  validates :password, length: { minimum: 8, maximum: 20 }
 
-  validate :password_complexity
+ # validate :password_complexity
 
   def self.new_remember_token
     SecureRandom.urlsafe_base64
