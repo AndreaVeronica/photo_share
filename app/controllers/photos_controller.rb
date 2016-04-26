@@ -7,6 +7,7 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @photos = Photo.all
+   # @photos = current_user.photos.order(created_at: :desc)
   end
 
   # GET /photos/1
@@ -31,6 +32,7 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = Photo.new(photo_params)
+    @photo.user = current_user
 
     respond_to do |format|
       if @photo.save
