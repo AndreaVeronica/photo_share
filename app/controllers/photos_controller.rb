@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
-  before_action :signed_in_user
+  # before_action :signed_in_user
 
 
   # GET /photos

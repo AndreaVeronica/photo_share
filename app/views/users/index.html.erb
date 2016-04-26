@@ -12,7 +12,6 @@
       <tr>
             <th>First name</th>
             <th>Last name</th>
-            <th>Username</th>
             <th>Email</th>
             <th>Password digest</th>
             <th>Remember token</th>
@@ -26,7 +25,6 @@
       <%= content_tag_for(:tr, @users) do |user| %>
             <td><%= user.first_name %></td>
             <td><%= user.last_name %></td>
-            <td><%= user.username %></td>
             <td><%= user.email %></td>
             <td><%= user.password_digest %></td>
             <td><%= user.remember_token %></td>
