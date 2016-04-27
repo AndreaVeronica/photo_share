@@ -1,5 +1,5 @@
 <div class="page-header">
-  <%= link_to new_photo_path, class: 'btn btn-primary' do %>
+  <%= link_to new_user_photo_path, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-plus"></span>
     New Photo
   <% end %>
@@ -18,15 +18,14 @@
         <th></th>
       </tr>
     </thead>
-
     <tbody>
       <%= content_tag_for(:tr, @photos) do |photo| %>
             <td><%= photo.title %></td>
             <td><%= photo.description %></td>
             <td><%= photo.photo_url %></td>
-            <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', user_path(current_user) %></td>
+        <td><%= link_to 'Edit', edit_user_photo_path(current_user, photo) %></td>
+        <td><%= link_to 'Destroy', [current_user, @photo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tbody>
   </table>

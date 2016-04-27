@@ -20,12 +20,13 @@ class PhotosController < ApplicationController
   # GET /photos/new
   def new
     @photo = Photo.new
-    @users = User.find(params[:user_id])
+    @user = User.find(params[:user_id])
   end
 
   # GET /photos/1/edit
   def edit
     @photo = Photo.find(params[:id])
+    @users = User.find(params[:user_id])
   end
 
   # POST /photos
@@ -36,7 +37,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+        format.html { redirect_to [current_user, @photo], notice: 'Photo was successfully created.' }
         format.json { render :show, status: :created, location: @photo }
       else
         format.html { render :new }
@@ -50,7 +51,7 @@ class PhotosController < ApplicationController
   def update
     respond_to do |format|
       if @photo.update(photo_params)
-        format.html { redirect_to @photo, notice: 'Photo was successfully updated.' }
+        format.html { redirect_to [current_user, @photo], notice: 'Photo was successfully updated.' }
         format.json { render :show, status: :ok, location: @photo }
       else
         format.html { render :edit }

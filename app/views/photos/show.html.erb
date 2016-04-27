@@ -1,12 +1,13 @@
 <div class="page-header">
-  <%= link_to photos_path, class: 'btn btn-default' do %>
+  <%= link_to user_path(current_user), class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
   <% end %>
-  <%= link_to edit_photo_path(@photo), class: 'btn btn-primary' do %>
+  <%= link_to edit_user_photo_path, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
+
   <h1>Show photo</h1>
 </div>
 
@@ -18,6 +19,6 @@
   <dd><%= @photo.description %></dd>
 
   <dt>Photo url:</dt>
-  <dd><%= @photo.photo_url %></dd>
+  <dd><%= image_tag @photo.photo_url %></dd>
 
 </dl>
