@@ -18,7 +18,6 @@
   <dt>Description:</dt>
   <dd><%= @photo.description %></dd>
 
-  <dt>Photo url:</dt>
-  <dd><%= image_tag @photo.photo_url %></dd>
-
+  <dt>Image</dt>
+  <dd><%= image_tag @photo.image.url(:medium) %></dd>
 </dl>

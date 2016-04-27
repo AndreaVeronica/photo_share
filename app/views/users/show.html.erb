@@ -2,14 +2,14 @@
 
   <%= link_to edit_user_path(@user), class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-pencil"></span>
-    Edit
+    Edit Profile
   <% end %>
   <%= link_to new_user_photo_path([current_user, @photo]), class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-pencil"></span>
-    New
+    Add New Photo
   <% end %>
   <%= form_for @user, method: :delete do |f| %>
-  <%= f.submit "Delete!", class: "delete" %>
+  <%= f.submit "Delete User!", class: 'btn btn-primary' %>
 <% end %>
 
   <h1>User Profile</h1>
@@ -37,7 +37,7 @@
 <ul>
   <% @user.photos.each do |photo| %>
     <li>
-       <%= image_tag photo.photo_url %>
+            <%=link_to image_tag photo.image %>
     </li>
   <% end %>
 </ul>

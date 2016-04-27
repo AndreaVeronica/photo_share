@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 before_action :set_user, only: [:show, :edit, :update, :destroy]
- #before_action :signed_in_user, only: [:index, :show, :edit, :update, :destroy]
+ #:signed_in_user, only: [:index, :show, :edit, :update, :destroy]
  #before_action :verify_correct_user, only: [:show, :edit, :update, :destroy]
 
 
@@ -60,7 +60,7 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to signin_path, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -1,8 +1,8 @@
 <div class="page-header">
- <!--  <%= link_to users_path, class: 'btn btn-default' do %>
+ <%= link_to user_path(current_user), class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
-  <% end %> -->
+  <% end %>
   <%= link_to @user, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-info-sign"></span>
     Show
