@@ -1,5 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
+
+
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -17,6 +19,8 @@ Bundler.require(*Rails.groups)
 
 module PhotoShare
   class Application < Rails::Application
+
+      config.serve_static_assets = true
 
      config.generators do |g|
       g.orm             :active_record
