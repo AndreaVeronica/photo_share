@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+
+
 
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'rails_12factor', group: :production
@@ -40,7 +41,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
   #amazon web services
-  gem 'aws-sdk', '< 2.0'
+  gem 'aws-sdk'
 
 
 
