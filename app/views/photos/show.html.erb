@@ -12,6 +12,9 @@
 </div>
 
 <dl class="dl-horizontal">
+  <dt>User</dt>
+  <dd><%= link_to @user.first_name , user_path(@user) %></dd>
+
   <dt>Title:</dt>
   <dd><%= @photo.title %></dd>
 
@@ -19,5 +22,5 @@
   <dd><%= @photo.description %></dd>
 
   <dt>Image</dt>
-  <dd><%= image_tag @photo.image.url(:medium) %></dd>
+  <dd><%= image_tag @photo.image.url(:large) %></dd>
 </dl>

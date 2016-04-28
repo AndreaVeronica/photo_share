@@ -23,7 +23,7 @@
             <td><%= photo.title %></td>
             <td><%= photo.description %></td>
             <td><%= photo.photo_url %></td>
-            <td><%= link_to 'Show', user_path(current_user) %></td>
+            <td><%= link_to 'Show', user_photo_path(current_user, photo) %></td>
         <td><%= link_to 'Edit', edit_user_photo_path(current_user, photo) %></td>
         <td><%= link_to 'Destroy', [current_user, @photo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
