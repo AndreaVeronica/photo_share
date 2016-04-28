@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.2.4'
 
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'rails_12factor', group: :production
