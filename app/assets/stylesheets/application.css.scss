@@ -20,4 +20,76 @@
 @import "bootstrap-sprockets.scss";
 @import "bootstrap.scss";
 
+body {
+  background-image: url(nature2.jpeg);
 
+
+}
+
+
+.home-page-body{
+  background-image: url(nature1.jpg);
+  background-size: cover;
+
+}
+
+.home-page{
+  background-color: rgba(255,255,255,.5);
+  margin-top: 120px;
+}
+
+.signin-page{
+  background-image: url(lavender1.jpg);
+  background-size: cover;
+}
+
+.sign-page{
+  background-color: rgba(255,255,255,.5);
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 150px;
+
+}
+
+h1.sign-in{
+  font-size: 50px;
+}
+
+.photo-gallery{
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.table-responsive{
+  background-color: white;
+}
+.text-change{
+  color: white;
+}
+
+body.user-profile{
+  background-image: url(Nature3.jpg);
+  background-size: cover;
+}
+
+.user-profile-middle{
+  background-color: rgba(255,255,255,.5);
+  margin: 20px;
+  border-radius: 5px;
+  height: 1000px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.image-change{
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.new-photo-view{
+  background-color: rgba(255,255,255,.5);
+  padding: 20px;
+  height: 800px;
+  margin: 20px;
+}

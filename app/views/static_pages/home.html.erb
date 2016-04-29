@@ -1,10 +1,12 @@
 <% provide(:title, 'Home') %>
-<div class="text-center jumbotron">
-  <h1>Welcome to This App!</h1>
-  <h3>This is the home page for my App</h3>
-  <br/>
+<body class= "home-page-body">
+    <div class="text-center jumbotron home-page">
+      <h1>Welcome!</h1>
+      <h3>Come share your photos us </h3>
+      <br/>
 
-  <br/>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-  <%= link_to "Sign in",      signin_path, class: "btn btn-large btn-primary" %>
-</div>
+      <br/>
+      <%= link_to "Sign up", signup_path, class: "btn btn-large btn-primary" %>
+      <%= link_to "Log in", signin_path, class: "btn btn-large btn-primary" %>
+    </div>
+</body>

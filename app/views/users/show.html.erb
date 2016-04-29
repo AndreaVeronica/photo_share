@@ -1,46 +1,49 @@
-<div class="page-header">
+<body class="user-profile">
+     <div class="user-profile-middle">
+        <div class="page-header">
 
-  <%= link_to edit_user_path(@user), class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-pencil"></span>
-    Edit Profile
-  <% end %>
-  <%= link_to new_user_photo_path([current_user, @photo]), class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-pencil"></span>
-    Add New Photo
-  <% end %>
-  <%= form_for @user, method: :delete do |f| %>
-  <%= f.submit "Delete User!", class: 'btn btn-primary' %>
-<% end %>
+          <%= link_to edit_user_path(@user), class: 'btn btn-primary' do %>
+            <span class="glyphicon glyphicon-pencil"></span>
+            Edit Profile
+          <% end %>
+          <%= link_to new_user_photo_path([current_user, @photo]), class: 'btn btn-primary' do %>
+            <span class="glyphicon glyphicon-pencil"></span>
+            Add New Photo
+          <% end %>
+          <%= form_for @user, method: :delete do |f| %>
+          <%= f.submit "Delete User!", class: 'btn btn-primary' %>
+        <% end %>
 
-  <h1>User Profile</h1>
-</div>
+          <h1>User Profile</h1>
+        </div>
 
-<dl class="dl-horizontal">
-  <dt>First name:</dt>
-  <dd><%= @user.first_name %></dd>
+        <dl class="dl-horizontal">
+          <dt>First name:</dt>
+          <dd><%= @user.first_name %></dd>
 
-  <dt>Last name:</dt>
-  <dd><%= @user.last_name %></dd>
+          <dt>Last name:</dt>
+          <dd><%= @user.last_name %></dd>
 
-  <!-- <dt>Email:</dt>
-  <dd><%= @user.email %></dd>
+          <!-- <dt>Email:</dt>
+          <dd><%= @user.email %></dd>
 
-  <dt>Password digest:</dt>
-  <dd><%= @user.password_digest %></dd>
+          <dt>Password digest:</dt>
+          <dd><%= @user.password_digest %></dd>
 
-  <dt>Remember token:</dt>
-  <dd><%= @user.remember_token %></dd> -->
+          <dt>Remember token:</dt>
+          <dd><%= @user.remember_token %></dd> -->
 
-</dl>
+        </dl>
 
+        <div class="gallery">
+            <ul class="gallery-photo">
+              <% @user.photos.each do |photo| %>
+                <li class="photo-gallery">
+                        <a href="/users/<%= @user.id %>/photos/<%= photo.id %>" class="image-change"><img src=<%= photo.image(:thumb) %>></a>
 
-<ul>
-  <% @user.photos.each do |photo| %>
-    <li>
-            <a href="/users/<%= @user.id %>/photos/<%= photo.id %>"><img src=<%= photo.image(:large) %>></a>
-
-    </li>
-  <% end %>
-</ul>
-
-
+                </li>
+              <% end %>
+            </ul>
+        </div>
+    </div>
+</body>
