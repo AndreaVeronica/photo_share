@@ -1,4 +1,17 @@
 <% provide(:title, 'Dashboard') %>
-<h2>Dashboard</h2>
-<h4>this page is to direct to the most recent posts the users, current user follows</h4>
+<div class="dashboard-page">
+    <h2>Trending Photos</h2>
 
+
+            <div class="gallery">
+                <ul class="gallery-photo">
+                  <% @users.each do |user| %>
+                      <% user.photos.each do |photo| %>
+                          <li class="photo-gallery">
+                            <a href="/users/<%= user.id %>/photos/<%= photo.id %>" class="image-change"><img src=<%= photo.image(:thumb) %>></a>
+                          </li>
+                    <% end %>
+                  <% end %>
+                </ul>
+            </div>
+</div>

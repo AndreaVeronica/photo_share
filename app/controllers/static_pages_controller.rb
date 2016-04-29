@@ -5,4 +5,9 @@ class StaticPagesController < ApplicationController
 
   def about
   end
+
+
+  def dashboard
+    @users = User.all
+  end
 end

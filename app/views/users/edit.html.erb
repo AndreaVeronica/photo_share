@@ -1,16 +1,17 @@
-<div class="page-header">
- <%= link_to user_path(current_user), class: 'btn btn-default' do %>
-    <span class="glyphicon glyphicon-list-alt"></span>
-    Back
-  <% end %>
-  <%= link_to @user, class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-info-sign"></span>
-    Show
-  <% end %>
-  <h1>Editing user</h1>
+<div class="edit-user-middle">
+  <div class="page-header">
+   <%= link_to user_path(current_user), class: 'btn btn-default' do %>
+      <span class="glyphicon glyphicon-list-alt"></span>
+      Back
+    <% end %>
+    <%= link_to @user, class: 'btn btn-primary' do %>
+      <span class="glyphicon glyphicon-info-sign"></span>
+      Show
+    <% end %>
+    <h1>Editing user</h1>
+  </div>
+
+  <%= render 'form' %>
+
 </div>
-
-<%= render 'form' %>
-
-
 
