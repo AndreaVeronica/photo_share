@@ -1,6 +1,7 @@
 class Photo < ActiveRecord::Base
    validates :title, presence: true
    validates :description, presence: true
+   validates :image, presence: true
 
 
    belongs_to :user
