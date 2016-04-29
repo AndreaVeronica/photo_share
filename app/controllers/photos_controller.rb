@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
-  before_action :set_photo, only: [:show, :edit, :update, :destroy]
   before_action :signed_in_user
+  before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :verify_correct_user, only: [:show, :edit, :update, :destroy]
 
 
   # GET /photos
@@ -26,7 +27,7 @@ class PhotosController < ApplicationController
   # GET /photos/1/edit
   def edit
     @photo = Photo.find(params[:id])
-    @users = User.find(params[:user_id])
+    # @users = User.find(params[:user_id])
   end
 
   # POST /photos
@@ -51,7 +52,7 @@ class PhotosController < ApplicationController
   def update
     respond_to do |format|
       if @photo.update(photo_params)
-        format.html { redirect_to [current_user, @photo], notice: 'Photo was successfully updated.' }
+        format.html { redirect_to user_photo_path(current_user, @photo), notice: 'Photo was successfully updated.' }
         format.json { render :show, status: :ok, location: @photo }
       else
         format.html { render :edit }
@@ -65,8 +66,9 @@ class PhotosController < ApplicationController
   def destroy
     @photo = Photo.find(params[:id])
     @photo.destroy
+
     respond_to do |format|
-      format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
+      format.html { redirect_to user_path(current_user), notice: 'Photo was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -81,4 +83,9 @@ class PhotosController < ApplicationController
     def photo_params
       params.require(:photo).permit(:title, :description, :image)
     end
+
+    def verify_correct_user
+      @photo = current_user.photos.find_by(id: params[:id])
+      redirect_to root_url, notice: 'Access Denied!' if @photo.nil?
+   end
 end

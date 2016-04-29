@@ -1,10 +1,14 @@
+<div class="edit-photo-middle">
+
 <div class="page-header">
 
-  <%= link_to user_photo_path, class: 'btn btn-primary' do %>
+  <%= link_to user_photo_path(current_user, @photo), class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-info-sign"></span>
-    Show
+    Back
   <% end %>
   <h1>Editing photo</h1>
 </div>
 
 <%= render 'form' %>
+
+</div>

@@ -1,26 +1,35 @@
-<div class="page-header">
-  <%= link_to user_path(current_user), class: 'btn btn-default' do %>
-    <span class="glyphicon glyphicon-list-alt"></span>
-    Back
-  <% end %>
-  <%= link_to edit_user_photo_path, class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-pencil"></span>
-    Edit
-  <% end %>
+<div class="show-photo-middle">
 
-  <h1>Show photo</h1>
+    <div class="page-header">
+      <%= link_to user_path(current_user), class: 'btn btn-default' do %>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        Back
+      <% end %>
+      <%= link_to edit_user_photo_path(current_user, @photo), class: 'btn btn-primary' do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+        Edit
+      <% end %>
+      <%= link_to user_photo_path(current_user, @photo), method: :delete, class: 'btn btn-primary' do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+        Delete
+      <% end %>
+
+
+      <h1>Show photo</h1>
+    </div>
+
+    <dl class="dl-horizontal">
+      <dt>User</dt>
+      <dd><%= link_to @user.first_name , user_path(@user) %></dd>
+
+      <dt>Title:</dt>
+      <dd><%= @photo.title %></dd>
+
+      <dt>Description:</dt>
+      <dd><%= @photo.description %></dd>
+
+      <dt>Image</dt>
+      <dd><%= image_tag @photo.image.url(:large) %></dd>
+    </dl>
+
 </div>
-
-<dl class="dl-horizontal">
-  <dt>User</dt>
-  <dd><%= link_to @user.first_name , user_path(@user) %></dd>
-
-  <dt>Title:</dt>
-  <dd><%= @photo.title %></dd>
-
-  <dt>Description:</dt>
-  <dd><%= @photo.description %></dd>
-
-  <dt>Image</dt>
-  <dd><%= image_tag @photo.image.url(:large) %></dd>
-</dl>
