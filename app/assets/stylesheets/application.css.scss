@@ -21,14 +21,14 @@
 @import "bootstrap.scss";
 
 body {
-  background-image: url(nature2.jpeg);
+  background-image: url("nature2.jpeg");
 
 
 }
 
 
 .home-page-body{
-  background-image: url(nature1.jpg);
+  background-image: url("nature1.jpg");
   background-size: cover;
 
 }
@@ -39,7 +39,7 @@ body {
 }
 
 .signin-page{
-  background-image: url(lavender1.jpg);
+  background-image: url("lavender1.jpg");
   background-size: cover;
 }
 
@@ -68,7 +68,7 @@ h1.sign-in{
 }
 
 body.user-profile{
-  background-image: url("Nature3.jpg");
+  background-image: url("nature4.jpg");
   background-size: cover;
 }
 
@@ -147,3 +147,14 @@ ul li a .remove-link{
   margin: 20px;
   border-radius: 5px;
 }
+
+.about-backg {
+  background-image: url("Nature3.jpg");
+  background-size: cover;
+}
+
+.dashboard-backg{
+  background-image: url("water.jpg");
+  background-size: cover;
+}
+
