@@ -1,27 +1,43 @@
-== README
+##PhotoShare
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###App Info
 
-Things you may want to cover:
+This app is a photo sharing app that allows users to post photos and share it with other users.
 
-* Ruby version
+[PhotoShare] (https://arcane-springs-84889.herokuapp.com/)
 
-* System dependencies
+Trello:
 
-* Configuration
+[Trello] (https://trello.com/b/L5WqTFNk/project-2)
 
-* Database creation
+### Technologies Used
 
-* Database initialization
+- Heroku
+- Ruby 2.3.1
+- Rails 4.2
+- PostgreSQL 9.4
+- Twitter Bootstrap 3.3
+- SASS 3.4
+- Bootstrap-generators 3.3
+- Paperclip 5.0.0.beta2
+- Amazon Web Services S3
 
-* How to run the test suite
+### Model Diagram
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+### Future Updates
+ - Add like buttons
+ - Add Followers/Following
+ - Add comments to photos
+ - Include searchable tags on photos
+ - Add option to purchase photos from User.
+ - Add usernames
+
+
+### User Story:
+
+The user of this app is a professional or amateur photographer that would a medium to share their photographer with other photo enthusiasts.
 
 
 Please feel free to use a different markup language if you do not plan to run
