@@ -1,16 +1,16 @@
-PhotoShare
+## PhotoShare
 
-App Info
+### App Info
 
 This app is a photo sharing app that allows users to post photos and share it with other users.
 
 [PhotoShare] (https://arcane-springs-84889.herokuapp.com/)
 
-Trello:
+### Trello:
 
 [Trello] (https://trello.com/b/L5WqTFNk/project-2)
 
- Technologies Used
+### Technologies Used
 
 - Heroku
 - Ruby 2.3.1
@@ -22,10 +22,10 @@ Trello:
 - Paperclip 5.0.0.beta2
 - Amazon Web Services S3
 
-Model Diagram
+### Model Diagram
 
 
- Future Updates
+###  Future Updates
  - Add like buttons
  - Add Followers/Following
  - Add comments to photos
@@ -34,10 +34,9 @@ Model Diagram
  - Add usernames
 
 
-User Story:
+### User Story:
 
 The user of this app is a professional or amateur photographer that would a medium to share their photographer with other photo enthusiasts.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
