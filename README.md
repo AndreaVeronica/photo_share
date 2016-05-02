@@ -23,7 +23,9 @@ This app is a photo sharing app that allows users to post photos and share it wi
 - Amazon Web Services S3
 
 ### Model Diagram
-
+![Homepage](http://i.imgur.com/s2vLkxO.jpg)
+![UserProfile](http://i.imgur.com/nloZ5sF.jpg)
+![Photoview](http://i.imgur.com/LFV1aaV.jpg)
 
 ###  Future Updates
  - Add like buttons
