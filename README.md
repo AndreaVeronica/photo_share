@@ -4,7 +4,7 @@
 
 This app is a photo sharing app that allows users to post photos and share it with other users.
 
-[PhotoShare] (https://arcane-springs-84889.herokuapp.com/)
+[PhotoShare] (https://photo-share-1.herokuapp.com/)
 
 ### Trello:
 
